@@ -59,22 +59,42 @@ public class Listasimple {
         if(inicio==null){
             JOptionPane.showMessageDialog(null, "La lista está vacía");
             inicio = nuevo;
-            return;
         }
-        Nodo after = inicio;
-        while(after != null && !after.getNombre().equals(nombreval)){
-            after = inicio.getEnlace();
-        }
-        
-        if(after == null){
-            JOptionPane.showMessageDialog(null, "No existe un objeto con ese nombre en la lista");
-            return;
-        }
-        
-        nuevo.setEnlace(after.getEnlace());
-        after.setEnlace(nuevo);
-        JOptionPane.showMessageDialog(null, "insertado con exito");
     }
+        
+    public void eliminarIndice(){
+        int contador = 1;
+        boolean encontrado = false;
+        int indice = Integer.parseInt(JOptionPane.showInputDialog("Ingrese hasta cual posicion"));
+        Nodo anterior = inicio;
+        Nodo siguiente = null;
+        
+        if(indice == 1){
+            inicio = inicio.getEnlace();
+            return;
+        }
+        while (anterior!=null){
+            if(contador+1==indice){
+                siguiente = anterior.getEnlace().getEnlace();
+                encontrado = true;
+                break;
+            }
+        }
+    }
+
+    //Lista, pide el nombre de la persona, ordenar la lista de forma alfabetica de manera ascedente, con un solo botón hacer eso, de la a-z
+    //metodo de poner antes, consultar, despues de un nodo dado, por nombre o por indice, ahora eliminar por indice o nombre, crear un ordenador de forma alfabetica
+    public void eliminarNombre(){
+        Nodo temporal = inicio;
+        String nomelim = JOptionPane.showInputDialog("Ingrese cual nombre desea eliminar");
+        if(inicio==null){
+        JOptionPane.showMessageDialog(null, "La lista está vacía");
+        }else{
+            while(temporal.getEnlace() != null){
+                temporal = temporal.getEnlace();
+            }
+        }
+    }    
     
     public void consultar(){
         
