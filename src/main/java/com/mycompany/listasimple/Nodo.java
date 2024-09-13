@@ -23,10 +23,11 @@ public class Nodo {
     public Nodo(){
     }
 
-    public Nodo(String nombre, int edad, float promedio) {
+    public Nodo(String nombre, int edad, float promedio, Nodo enlace) {
         this.nombre = nombre;
         this.edad = edad;
         this.promedio = promedio;
+        this.enlace = enlace;
     }
     
     public String getNombre() {

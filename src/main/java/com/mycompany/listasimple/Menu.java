@@ -35,6 +35,12 @@ public class Menu extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         Insertarfinal = new javax.swing.JButton();
         InsertAfterName = new javax.swing.JButton();
+        InsertAfterAge = new javax.swing.JButton();
+        InsertAfterAverage = new javax.swing.JButton();
+        InsertPosition = new javax.swing.JButton();
+        DeleteName = new javax.swing.JButton();
+        DeletePosition = new javax.swing.JButton();
+        OrderA = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -68,9 +74,58 @@ public class Menu extends javax.swing.JFrame {
         });
 
         InsertAfterName.setText("Insertar Luego de un Nombre");
+        InsertAfterName.setEnabled(false);
         InsertAfterName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 InsertAfterNameActionPerformed(evt);
+            }
+        });
+
+        InsertAfterAge.setText("Insertar Luego de una edad");
+        InsertAfterAge.setEnabled(false);
+        InsertAfterAge.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                InsertAfterAgeActionPerformed(evt);
+            }
+        });
+
+        InsertAfterAverage.setText("Insertar Luego de Promedio");
+        InsertAfterAverage.setEnabled(false);
+        InsertAfterAverage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                InsertAfterAverageActionPerformed(evt);
+            }
+        });
+
+        InsertPosition.setText("Insertar en Posición");
+        InsertPosition.setEnabled(false);
+        InsertPosition.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                InsertPositionActionPerformed(evt);
+            }
+        });
+
+        DeleteName.setText("Eliminar por Nombre");
+        DeleteName.setEnabled(false);
+        DeleteName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DeleteNameActionPerformed(evt);
+            }
+        });
+
+        DeletePosition.setText("Eliminar por Posicion");
+        DeletePosition.setEnabled(false);
+        DeletePosition.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DeletePositionActionPerformed(evt);
+            }
+        });
+
+        OrderA.setText("Ordenar Alfabeticamente");
+        OrderA.setEnabled(false);
+        OrderA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OrderAActionPerformed(evt);
             }
         });
 
@@ -79,62 +134,89 @@ public class Menu extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(nombre, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
-                    .addComponent(edad)
-                    .addComponent(promedio))
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(CrearInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Insertarfinal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(consultar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(79, 79, 79))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel4))
+                                .addGap(46, 46, 46)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(nombre)
+                                    .addComponent(edad)
+                                    .addComponent(promedio, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(InsertAfterAverage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(InsertAfterName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(InsertAfterAge, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(InsertPosition, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(34, 34, 34)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(DeleteName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(CrearInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(Insertarfinal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(consultar, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(DeletePosition, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(OrderA)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(162, 162, 162)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addComponent(InsertAfterName)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabel1)))
+                .addContainerGap(76, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(jLabel1)
-                .addGap(74, 74, 74)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CrearInicio)
-                    .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(70, 70, 70)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(CrearInicio)
+                            .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(edad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Insertarfinal)
+                            .addComponent(jLabel3))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(promedio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(consultar)
+                            .addComponent(jLabel4)))
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(edad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3)
-                    .addComponent(Insertarfinal))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(InsertAfterName)
+                    .addComponent(DeleteName))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(promedio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4)
-                    .addComponent(consultar))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(InsertAfterAge)
+                    .addComponent(DeletePosition))
                 .addGap(18, 18, 18)
-                .addComponent(InsertAfterName)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(InsertAfterAverage)
+                    .addComponent(OrderA))
+                .addGap(18, 18, 18)
+                .addComponent(InsertPosition)
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void CrearInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CrearInicioActionPerformed
-        
+    InsertAfterName.setEnabled(true);
+    InsertAfterAge.setEnabled(true);
+    InsertAfterAverage.setEnabled(true);
+    OrderA.setEnabled(true);
+    InsertPosition.setEnabled(true);
+    DeleteName.setEnabled(true);
+    DeletePosition.setEnabled(true);
         objlist.insertarInicio(
                 nombre.getText(),Integer.parseInt(edad.getText()), Float.parseFloat(promedio.getText()));
     }//GEN-LAST:event_CrearInicioActionPerformed
@@ -144,12 +226,43 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_consultarActionPerformed
 
     private void InsertarfinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InsertarfinalActionPerformed
+        InsertAfterName.setEnabled(true);
+        InsertAfterAge.setEnabled(true);
+        InsertAfterAverage.setEnabled(true);
+        InsertPosition.setEnabled(true);
+        OrderA.setEnabled(true);
+        DeleteName.setEnabled(true);
+        DeletePosition.setEnabled(true);
         objlist.insertarFinal(nombre.getText(), Integer.parseInt(edad.getText()), Float.parseFloat(promedio.getText()));
     }//GEN-LAST:event_InsertarfinalActionPerformed
 
     private void InsertAfterNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InsertAfterNameActionPerformed
-        objlist.insertareleccion(nombre.getText(), Integer.parseInt(edad.getText()), Float.parseFloat(promedio.getText()));
+        objlist.insertarName(nombre.getText(), Integer.parseInt(edad.getText()), Float.parseFloat(promedio.getText()));
     }//GEN-LAST:event_InsertAfterNameActionPerformed
+
+    private void InsertAfterAgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InsertAfterAgeActionPerformed
+        objlist.insertAge(nombre.getText(), Integer.parseInt(edad.getText()), Float.parseFloat(promedio.getText()));
+    }//GEN-LAST:event_InsertAfterAgeActionPerformed
+
+    private void InsertAfterAverageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InsertAfterAverageActionPerformed
+       objlist.insertAverage(nombre.getText(), Integer.parseInt(edad.getText()), Float.parseFloat(promedio.getText()));
+    }//GEN-LAST:event_InsertAfterAverageActionPerformed
+
+    private void InsertPositionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InsertPositionActionPerformed
+        objlist.insertPosition(nombre.getText(), Integer.parseInt(edad.getText()), Float.parseFloat(promedio.getText()));
+    }//GEN-LAST:event_InsertPositionActionPerformed
+
+    private void DeleteNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteNameActionPerformed
+        objlist.deleteName();
+    }//GEN-LAST:event_DeleteNameActionPerformed
+
+    private void DeletePositionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeletePositionActionPerformed
+        objlist.deletePosition();
+    }//GEN-LAST:event_DeletePositionActionPerformed
+
+    private void OrderAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderAActionPerformed
+        objlist.order();
+    }//GEN-LAST:event_OrderAActionPerformed
 
     /**
      * @param args the command line arguments
@@ -188,8 +301,14 @@ public class Menu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton CrearInicio;
+    private javax.swing.JButton DeleteName;
+    private javax.swing.JButton DeletePosition;
+    private javax.swing.JButton InsertAfterAge;
+    private javax.swing.JButton InsertAfterAverage;
     private javax.swing.JButton InsertAfterName;
+    private javax.swing.JButton InsertPosition;
     private javax.swing.JButton Insertarfinal;
+    private javax.swing.JButton OrderA;
     private javax.swing.JButton consultar;
     private javax.swing.JTextField edad;
     private javax.swing.JLabel jLabel1;
