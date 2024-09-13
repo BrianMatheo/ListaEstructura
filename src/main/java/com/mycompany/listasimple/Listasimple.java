@@ -27,6 +27,8 @@ public class Listasimple {
         }
     }
     
+    // algoritmo que genere n nombres de forma aleatoria aunque no sean nombres correctos
+    
     public void insertarFinal(String nombre, int edad, float promedio){
         Nodo nuevo = new Nodo();
         nuevo.setNombre(nombre);
@@ -163,26 +165,6 @@ public class Listasimple {
         }
     }
     }
-        
-    public void eliminarIndice(){
-        int contador = 1;
-        boolean encontrado = false;
-        int indice = Integer.parseInt(JOptionPane.showInputDialog("Ingrese hasta cual posicion"));
-        Nodo anterior = inicio;
-        Nodo siguiente = null;
-        
-        if(indice == 1){
-            inicio = inicio.getEnlace();
-            return;
-        }
-        while (anterior!=null){
-            if(contador+1==indice){
-                siguiente = anterior.getEnlace().getEnlace();
-                encontrado = true;
-                break;
-            }
-        }
-    }
 
     //Lista, pide el nombre de la persona, ordenar la lista de forma alfabetica de manera ascedente, con un solo botón hacer eso, de la a-z
     //metodo de poner antes, consultar, despues de un nodo dado, por nombre o por indice, ahora eliminar por indice o nombre, crear un ordenador de forma alfabetica
@@ -251,7 +233,7 @@ public class Listasimple {
 
         Nodo temporal1;
         Nodo temporal2;
-        String nom = "";
+        String nom;
         boolean cambiado;
         int ed;
         float prom;
