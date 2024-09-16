@@ -41,6 +41,7 @@ public class Menu extends javax.swing.JFrame {
         DeleteName = new javax.swing.JButton();
         DeletePosition = new javax.swing.JButton();
         OrderA = new javax.swing.JButton();
+        CreateNames = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -129,6 +130,13 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
+        CreateNames.setText("Crear cantidad de nombres n");
+        CreateNames.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CreateNamesActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -156,23 +164,23 @@ public class Menu extends javax.swing.JFrame {
                         .addGap(34, 34, 34)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(DeleteName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(CrearInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(Insertarfinal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(consultar, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(CrearInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Insertarfinal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(consultar, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(DeletePosition, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(OrderA)))
+                            .addComponent(CreateNames, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(OrderA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(162, 162, 162)
+                        .addGap(200, 200, 200)
                         .addComponent(jLabel1)))
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
+                .addGap(23, 23, 23)
                 .addComponent(jLabel1)
-                .addGap(70, 70, 70)
+                .addGap(74, 74, 74)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -202,7 +210,9 @@ public class Menu extends javax.swing.JFrame {
                     .addComponent(InsertAfterAverage)
                     .addComponent(OrderA))
                 .addGap(18, 18, 18)
-                .addComponent(InsertPosition)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(InsertPosition)
+                    .addComponent(CreateNames))
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
@@ -264,6 +274,17 @@ public class Menu extends javax.swing.JFrame {
         objlist.order();
     }//GEN-LAST:event_OrderAActionPerformed
 
+    private void CreateNamesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateNamesActionPerformed
+        InsertAfterName.setEnabled(true);
+        InsertAfterAge.setEnabled(true);
+        InsertAfterAverage.setEnabled(true);
+        InsertPosition.setEnabled(true);
+        OrderA.setEnabled(true);
+        DeleteName.setEnabled(true);
+        DeletePosition.setEnabled(true);        
+        objlist.createName();
+    }//GEN-LAST:event_CreateNamesActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -301,6 +322,7 @@ public class Menu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton CrearInicio;
+    private javax.swing.JButton CreateNames;
     private javax.swing.JButton DeleteName;
     private javax.swing.JButton DeletePosition;
     private javax.swing.JButton InsertAfterAge;

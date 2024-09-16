@@ -1,5 +1,6 @@
 package com.mycompany.listasimple;
 
+import java.util.Random;
 import javax.swing.JOptionPane;
 
 public class Listasimple {
@@ -28,6 +29,26 @@ public class Listasimple {
     }
     
     // algoritmo que genere n nombres de forma aleatoria aunque no sean nombres correctos
+    
+    public void createName(){
+        int n = Integer.parseInt(JOptionPane.showInputDialog("cuantos nombres quieres crear?"));
+        Random random = new Random();
+        int surprise = random.nextInt(n);
+        for(int i = 0; i<n;i++){
+        int largo = random.nextInt(8) + 3;
+        int age = random.nextInt(100) + 1;
+        float prom = random.nextFloat(5);
+        String name = "";
+            for(int j = 0; j < largo; j++){
+                char aleatorio = (char)(random.nextInt(26) + 97);
+                name = name + aleatorio;
+            }
+            if(i==surprise){
+                name = "Matheo";
+            }
+            insertarFinal(name,age,prom);
+        }
+    }
     
     public void insertarFinal(String nombre, int edad, float promedio){
         Nodo nuevo = new Nodo();
