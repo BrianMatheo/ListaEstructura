@@ -1,5 +1,6 @@
 package com.mycompany.listasimple;
 
+import java.util.Arrays;
 import java.util.Random;
 import javax.swing.JOptionPane;
 
@@ -37,7 +38,7 @@ public class Listasimple {
         for(int i = 0; i<n;i++){
         int largo = random.nextInt(8) + 3;
         int age = random.nextInt(100) + 1;
-        float prom = random.nextFloat(5);
+        float prom = random.nextInt() * 5;
         String name = "";
             for(int j = 0; j < largo; j++){
                 char aleatorio = (char)(random.nextInt(26) + 97);
@@ -218,6 +219,7 @@ public class Listasimple {
             }
             temporal2 = temporal1.getEnlace();
             contador++;
+        
         }
     }    
     
@@ -284,8 +286,24 @@ public class Listasimple {
                 temporal1 = temporal1.getEnlace();
             }
         } while (cambiado);
-    
     }
+    
+    public void bubblesort(){
+    Nodo temporal = inicio;
+    int contador = 0;
+    while(temporal.getEnlace()!=null){
+    temporal = temporal.getEnlace();
+    contador++;
+    }
+    int n = contador;
+    for(int i = 0; i<n; i++){
+        for(int j = 0; j < n-i-1; j++){
+            if(){
+                
+            }
+        }
+    }
+}
     
     public void consultar(){
         

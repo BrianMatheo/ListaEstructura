@@ -53,10 +53,10 @@
                           <Component id="DeleteName" max="32767" attributes="0"/>
                           <Component id="CrearInicio" max="32767" attributes="0"/>
                           <Component id="Insertarfinal" max="32767" attributes="0"/>
-                          <Component id="consultar" alignment="0" min="-2" pref="112" max="-2" attributes="0"/>
                           <Component id="DeletePosition" alignment="0" max="32767" attributes="0"/>
                           <Component id="CreateNames" max="32767" attributes="0"/>
                           <Component id="OrderA" alignment="0" max="32767" attributes="0"/>
+                          <Component id="consultar" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
